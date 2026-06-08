@@ -13,8 +13,6 @@ Interactive Python tool for measuring spectral features of supernova spectra. Gi
 - Automatic separation of absorption and emission components
 - pEW, FWHM and relativistic Doppler velocity for both components
 - MC uncertainty estimation by randomly perturbing integration boundaries within ±20% of the line FWHM
-- Graceful handling of emission-free spectra (returns NaN for emission quantities)
-- Batch processing of multiple supernova directories
 - Results and diagnostic plots saved automatically
 
 ---
