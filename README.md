@@ -1,5 +1,5 @@
-# SUGAAR
-### Spectral User-Guided Absorption-emission Analyzer Redshift-corrected
+# Spectral User-Guided Absorption-emission Analyzer Redshift-corrected (SUGAAR)
+
 
 Interactive Python tool for measuring spectral features of supernova spectra. Given a 1D spectrum (wavelength, flux), the user interactively selects two continuum anchor regions; SUGAAR fits a linear continuum via a derivative method, normalises the profile, and automatically identifies and measures both the absorption trough and emission peak of a spectral line. Uncertainties are estimated via Monte Carlo boundary perturbation (200 trials scaled to the measured FWHM). Results are saved to text files for further analysis.
 
