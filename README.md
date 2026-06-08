@@ -128,7 +128,7 @@ If you use SUGAAR in your research, please cite this repository:
 
 ```
 @software{SUGAAR,
-  author = {Your Name},
+  author = {Maider González-Bañuelos},
   title  = {SUGAAR: Spectral User-Guided Absorption-emission Analyzer Redshift-corrected},
   year   = {2026},
   url    = {https://github.com/MaiderGB/SUGAAR}
