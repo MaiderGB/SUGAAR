@@ -1,9 +1,20 @@
 """
-Supernova Spectrum Analyzer
+============================
+SUGAAR: Spectral User-Guided Absorption-emission Analyzer Redshift-corrected
 ============================
 Interactive tool for measuring pEW, FWHM,
 and expansion velocities from supernova spectra.
 
+'''
+This code incorporates and extends parts of the interactive spectral
+normalization routine by Thomas de Jaeger.
+Copyright (c) 2019 Thomas de Jaeger
+Licensed under the MIT License.
+
+Substantial modifications and extensions:
+Copyright (c) 2026 Maider González-Bañuelos
+'''
+   
 Usage
 -----
 1. Set the configuration variables at the bottom of this file.
