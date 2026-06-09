@@ -578,7 +578,7 @@ class SpectrumAnalyzer:
         else:
             e_pEW2 = e_fwhm2 = mean_v2 = e_vel2 = float('nan')
 
-        # Plot the zero-perturbation fit for the absorption velocity (for inspection)
+        # Plot the fit for the absorption velocity (for inspection)
         xv1_ref, yv1_ref = self._safe_region(wave, flux, wave_st1, wave_end1)
         if xv1_ref is not None:
             def gaus(x, y0, a, x0, sigma):
@@ -603,7 +603,34 @@ class SpectrumAnalyzer:
             plt.title('Absorption velocity fit')
             plt.legend()
             plt.show()
-
+           
+        # Plot the fit for the emission velocity (for inspection)
+        if has_emission:
+            xv2_ref, yv2_ref = self._safe_region(wave, flux, wave_st2, wave_end2)
+            if xv2_ref is not None:
+                def gaus(x, y0, a, x0, sigma):
+                    return y0 + a * np.exp(-(x - x0) ** 2 / (2 * sigma ** 2))
+                nf2_ref = yv2_ref / (self.continuum_slope * (xv2_ref - xv2_ref[0]) + yv2_ref[0])
+                plt.figure()
+                plt.plot(xv2_ref, nf2_ref, 'k-', label='Emission region')
+                plt.axhline(1.0, color='red', linestyle='--')
+                peak_idx = np.argmax(nf2_ref)
+                fwhm_ref = gaussian_fwhm(
+                    Spectrum1D(spectral_axis=xv2_ref * u.Unit('Angstrom'),
+                               flux=nf2_ref * u.Unit('erg / (cm2 s Angstrom)')),
+                    regions=None
+                ).value
+                p0 = [1.0, nf2_ref[peak_idx] - 1.0, xv2_ref[peak_idx], max(fwhm_ref / 2.355, 1.0)]
+                try:
+                    popt, _ = curve_fit(gaus, xv2_ref, nf2_ref, p0=p0, maxfev=5000)
+                    plt.plot(xv2_ref, gaus(xv2_ref, *popt), 'b--', label='Gaussian fit')
+                    plt.axvline(popt[2], color='blue', linestyle=':', label=f'x0 = {popt[2]:.1f} Å')
+                except Exception:
+                    pass
+                plt.title('Emission velocity fit')
+                plt.legend()
+                plt.show()
+        
         return e_pEW1, e_pEW2, e_fwhm1, e_fwhm2, mean_v1, mean_v2, e_vel1, e_vel2
 
     def _st_error(self, true, measurements):
