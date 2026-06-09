@@ -6,12 +6,12 @@ Interactive tool for measuring pEW, FWHM,
 and expansion velocities from supernova spectra.
 
 '''
-This code incorporates and extends parts of the interactive spectral
-normalization routine by Thomas de Jaeger.
-Copyright (c) 2019 Thomas de Jaeger
-Licensed under the MIT License.
+The interactive matplotlib event-handling framework (mouse clicks 
+and key press structure) is inspired by the spectral normalization 
+routine by Thomas de Jaeger (MIT License, 2019).
+All spectral analysis methods (continuum fitting, pEW, FWHM, 
+velocity, error estimation) are original work.
 
-Substantial modifications and extensions:
 Copyright (c) 2026 Maider González-Bañuelos
 '''
    
