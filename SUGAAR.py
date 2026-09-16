@@ -518,7 +518,7 @@ class SpectrumAnalyzer:
     def _mc_errors(self, wave, flux, n_trials=200):
         """
         Estimate measurement uncertainties by randomly perturbing the integration
-        boundaries within ±20% of the measured FWHM on each side.
+        boundaries within ±20% (by default) of the measured FWHM on each side.
 
         This captures the uncertainty from where exactly the boundaries are placed —
         i.e. how much the result would change if a different user clicked slightly
