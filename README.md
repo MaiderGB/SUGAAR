@@ -12,7 +12,7 @@ Interactive Python tool for measuring spectral features of supernova spectra. Gi
 - Linear continuum fitting via derivative-based anchor detection
 - Automatic separation of absorption and emission components
 - pEW, FWHM and relativistic Doppler velocity for both components
-- MC uncertainty estimation by randomly perturbing integration boundaries of the line FWHM (default: whithin 0.20, i.e. +/-20%).
+- MC uncertainty estimation by randomly perturbing integration boundaries within 20% (by default) of the line FWHM.
 - Results and diagnostic plots saved automatically
 
 ---
