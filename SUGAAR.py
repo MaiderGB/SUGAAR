@@ -754,7 +754,7 @@ RESULTS_BASE_DIRECTORY = '/path/to/results'
 REDSHIFT = 0.0               # 0.0 by default
 REST_WAVELENGTH = 6563       # Å  — H-alpha 6563 by default
 FILE_DELIMITER = ','         # delimiter used in your spectrum files
-FILENAME_PREFIX = 'NEURKETAK'
+FILENAME_PREFIX = 'MEASUREMENTS'
 
 ### ============================================================================
 ### ============================================================================
