@@ -28,7 +28,21 @@ pip install numpy scipy matplotlib astropy specutils scikit-learn
 ```
 
 ---
+## Input structure
 
+SAMPLE_DIRECTORY should contain one subdirectory per supernova, each holding the
+spectrum files for that object:
+
+SAMPLE_DIRECTORY/
+├── SN1/
+│   ├── spectrum_01.csv
+│   ├── spectrum_02.csv
+│   └── ...
+├── SN2/
+│   └── spectrum_01.csv
+└── ...
+
+---
 ## Usage
 
 ### 1. Configure
@@ -62,7 +76,7 @@ An interactive window opens for each spectrum file found in `SAMPLE_DIRECTORY`.
 | `r` | Reset regions and start again |
 | `z` | Save a row of zeros (line not measurable) |
 | `n` | Save a row of NaNs (spectrum too noisy) |
-| `b` | Quit |
+| `b` | Quit/ break out of the program |
 
 
 ## Output
