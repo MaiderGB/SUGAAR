@@ -138,13 +138,8 @@ Uncertainties are estimated by combining two contributions in quadrature:
 
 ## Citation
 
-If you use SUGAAR in your research, please cite this repository:
+## Citation
 
-```
-@software{SUGAAR,
-  author = {González-Bañuelos, Maider},
-  title  = {SUGAAR: Spectral User-Guided Absorption-emission Analyzer Redshift-corrected},
-  year   = {2026},
-  url    = {https://github.com/MaiderGB/SUGAAR}
-}
-```
+If you use SUGAAR in your research, please cite [González-Bañuelos et al. (2025)](https://doi.org/10.1051/0004-6361/202554629) 
+where it was first used, and include the GitHub URL as a footnote.
+
