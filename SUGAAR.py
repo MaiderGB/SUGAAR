@@ -25,7 +25,7 @@ Usage
 5. Press 'c' → compute pEW, FWHM, velocity and save results
 6. Press 'z' → write a row of zeros (no line)
 7. Press 'n' → write a row of NaNs  (spectrum too noisy/ line not measurable)
-8. Press 'b' → quit
+8. Press 'b' → quit/ break out of the program
 
 Configuration
 -------------
@@ -94,7 +94,7 @@ def gaussian(x, amplitude, mean, stddev):
 
 class SpectrumAnalyzer:
     """
-    Interactive spline-fitting routine for supernova spectral analysis.
+    Interactive linear-continuum fitting routine for supernova spectral analysis.
 
     Parameters
     ----------
