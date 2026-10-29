@@ -522,8 +522,11 @@ class SpectrumAnalyzer:
 
         This captures the uncertainty from where exactly the boundaries are placed —
         i.e. how much the result would change if a different user clicked slightly
-        differently. Returns (e_pEW1, e_pEW2, e_fwhm1, e_fwhm2, mean_v1, mean_v2,
-        e_vel1, e_vel2).
+        differently. For pEW and FWHM the central value is the unperturbed measurement and the
+        MC gives the uncertainty only. For velocity the reported value is the MC
+        mean across all trials, which is more robust than a single Gaussian fit
+        to the unperturbed region. The diagnostic plot shows unperturbed fit
+        for visual inspection.
         """
         wave_st1  = self.x[self.start_idx_negative]
         wave_end1 = self.x[self.end_idx_negative]
