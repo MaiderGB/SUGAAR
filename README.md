@@ -113,7 +113,7 @@ $$\mathrm{pEW} = -\int \left(1 - \frac{F_\lambda}{F_{\rm cont}}\right) d\lambda$
 
 ### Velocity
 A Gaussian is fit to the absorption trough of the normalised profile. The centroid $\lambda_0$ is converted to an expansion velocity via the relativistic Doppler formula. The reported velocity is the mean of 200 Monte Carlo trials (boundary perturbation), rather than a single Gaussian fit, making it more 
-robust to line asymmetry and boundary placement. The diagnostic plot shows the Gaussian fit to the unperturbed region for visual inspection only.
+robust to line asymmetry and boundary placement. The diagnostic plot shows the Gaussian fit to the unperturbed region for visual inspection.
 
 $$v = c \cdot \frac{\left(\lambda_0 / \lambda_{\rm rest}\right)^2 - 1}{\left(\lambda_0 / \lambda_{\rm rest}\right)^2 + 1}$$
 
